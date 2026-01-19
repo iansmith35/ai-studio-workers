@@ -180,7 +180,12 @@ def status():
     
     click.echo(click.style("✓ Configuration looks good!", fg="green"))
     click.echo(f"  Endpoint ID: {RUNPOD_ENDPOINT_ID}")
-    click.echo(f"  API Key: {'*' * (len(RUNPOD_API_KEY) - 4)}{RUNPOD_API_KEY[-4:]}")
+    # Safely display last 4 chars of API key, or show asterisks if too short
+    if len(RUNPOD_API_KEY) >= 4:
+        masked_key = f"{'*' * (len(RUNPOD_API_KEY) - 4)}{RUNPOD_API_KEY[-4:]}"
+    else:
+        masked_key = '*' * len(RUNPOD_API_KEY)
+    click.echo(f"  API Key: {masked_key}")
     click.echo("\nYou can now send requests to your GPU endpoint!")
 
 

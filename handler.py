@@ -6,7 +6,7 @@ def handler(job):
     Processes requests from the local bridge and returns responses.
     
     Args:
-        job: Job object containing input data
+        job (dict): Job object containing input data
         
     Returns:
         str or dict: Response to be sent back to the client
