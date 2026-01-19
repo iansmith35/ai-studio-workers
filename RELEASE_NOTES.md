@@ -1,5 +1,3 @@
-Release v1.0.0
+# Initial Release - RunPod Serverless Deployment
 
-Title: Initial Release - RunPod Serverless Deployment
-
-Body: Initial release with RunPod serverless deployment setup including handler.py, requirements.txt, and Dockerfile
+Initial release with RunPod serverless deployment setup including handler.py with the processing function, requirements.txt with dependencies, and Dockerfile for RunPod serverless deployment. This release is ready to be used as an endpoint for RunPod serverless workers.
